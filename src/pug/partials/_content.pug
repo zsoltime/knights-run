@@ -1,0 +1,9 @@
+main.content
+  .container.container--main
+    .board
+      - var i = 0, k = 0
+        while i++ < 8
+          .board__row
+            - var j = 0
+              while j++ < 8
+                .board__square(data-index=k++)

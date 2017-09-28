@@ -1,0 +1,35 @@
+.container--main
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: calc(100vh - 7.625rem - 1px)
+
+.board
+  align-items: center
+  border: 1px solid color(grey, dark)
+  display: flex
+  flex-wrap: wrap
+  height: 75vmin
+  margin-bottom: 1rem
+  margin-top: 0
+  width: 75vmin
+
+  &__row
+    display: flex
+    height: 12.5%
+    width: 100%
+
+    &:nth-child(even) .board__square:nth-child(odd),
+    &:nth-child(odd) .board__square:nth-child(even)
+      background-color: color(grey, dark)
+
+  &__square
+    background-color: color(grey, accent)
+    height: 100%
+    padding: 1%
+    transition: background .3s ease-in-out
+    width: 12.5%
+
+    &--used
+      background-color: #A4C5C6 !important
